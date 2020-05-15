@@ -29,7 +29,7 @@ app.get("/coins", (req: express.Request, res: express.Response) => {
 });
 
 app.get("/coin/:coin", (req: express.Request, res: express.Response) => {
-  const coins: [Coin] = getCoins();
+  const coins: Coin[] = getCoins();
   const result = coins.find(
     (coin: Coin) => coin.name.toLowerCase() == req.params.coin.toLowerCase()
   );
