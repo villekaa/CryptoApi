@@ -24,7 +24,7 @@ schedule.scheduleJob("*/5 * * * *", async function () {
 });
 
 app.get("/coins", (req: express.Request, res: express.Response) => {
-  const coins: [Coin] = getCoins();
+  const coins: Coin[] = getCoins();
   res.status(200).json(coins);
 });
 
